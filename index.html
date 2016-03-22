@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="-1" />
+    <title>Feed RSS App </title>
+	<meta name="viewport" content="width=device-width height=device-height initial-scale=1 "/>
+	<!--Css-->
+	<link rel="stylesheet" type="text/css" href="Assets/_css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="Assets/_css/bootstrap-spt-min.css" />	
+	
+    <link rel="stylesheet" type="text/css" href="Assets/_css/icon/style.css" />
+	
+	<!--Apps css-->
+	<link rel="stylesheet" type="text/css" href="Assets/_css/styles.css" />
+	
+	
+	<!--js-->
+	<script type="text/javascript" src="Assets/_lib/jquery-1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="Assets/_lib/bootstrap-3.2.0/bootstrap.min.js"></script>
+    <script type="text/javascript" src="Assets/_lib/angular-1.2.21/angular.min.js"></script>
+    <script type="text/javascript" src="Assets/_lib/angular-1.2.21/angular-route.min.js"></script>
+    <script type="text/javascript" src="Assets/_lib/angular-ui-0.11.0/ui-bootstrap-tpls-0.11.0.min.js"></script>
+    <script type="text/javascript" src="Assets/_lib/angular-1.2.21/i18n/angular-locale_es.js"></script>
+	<script type="text/javascript" src="Assets/_lib/datejs-a1.0/date-es-ES.js"></script>
+	
+	
+    
+    
+	<!--Angular and app js-->
+	<script type="text/javascript" src="app.js"></script>
+	
+	<!--Js Utils-->
+	<script type="text/javascript" src="Assets/_js/utilidades.js"></script>
+	<script type="text/javascript" src="Assets/_js/angular-utf8-base64.in.js"></script>
+	<script type="text/javascript" src="Assets/_js/xml2json.js"></script>
+	
+	<!--CTRL-->
+	<script type="text/javascript" src="Controllers/feedCtrl.js"></script>
+	
+	
+	<!--services directives documents-->
+	<script type="text/javascript" src="Services/Services.js"></script>
+	
+	
+</head>
+<body onunload="">
+	
+
+    
+	<div ng-app="app" ng-cloak >
+		<div ng-view></div>
+	</div>
+</body>

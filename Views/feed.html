@@ -1,0 +1,52 @@
+﻿
+
+	
+  
+	<div class="container" >
+		
+		<div class="row row-separator" ng-show="model.feed">
+			<div class="col-xs-9 pull-left">
+				<h5><label>Title:</label>&nbsp;{{model.feed.title}}</h5>
+			</div>
+		</div>
+		<div class="row row-separator" ng-show="model.feed">
+			<div class="col-xs-12 pull-left">
+				<label>Description:</label>&nbsp;{{model.feed.description}}
+			</div>
+		</div>
+		<div class="row row-separator">
+			<div class="col-xs-3 entry-list" >
+				<button id="up" type="button" ng-click="movePage(true);" class="btn btn-default btn-sm" title="Key Up" ng-disabled="true">
+				<span class="icon-arrow-up"></span></button><br/>
+				<br/>
+				<ul>
+					<li ng-repeat="entry in model.pageEntries"  title="{{entry.title}}" ng-class="{ 'li-selected' : model.entry == {{$index}}}" id="li-{{$index}}">
+						<!-- <a ng-click="watchVideo(entry.link);"></a> -->
+						{{entry.title.substring(0, 40)}}...<br/> - {{printDate(model.myProxy?entry.pubDate:entry.publishedDate)}}<!--publishDate for api google-->
+					</li>
+				</ul>
+				<br/>
+				<button id="down" type="button" ng-click="movePage(false);" class="btn btn-default btn-sm" ng-disabled="true"><span class="icon-arrow-down"></span></button>
+				<br/><br/>
+				<label title="Use key Right/ Left to Move Page">Entry {{model.entry}} Page {{model.page}} of {{model.totalPages}}</label>
+			
+			</div>
+			
+			<div class="col-xs-9 " ng-show="model.feed" >
+				<div class="video">
+					<iframe ng-src="{{model.iframeSrc}}" width="640" height="360" allowfullscreen frameborder="0" placeholder="Key Enter to Watch"></iframe>
+				</div>
+				<label>{{entry.content}}</label>
+			</div>
+		</div>
+		<div class="row row-separator">
+			<div class="col-xs-12 col-md-12" style="text-align: right;margin-top:10px;">
+				<div style="font-size: 0.9em;">* Use Key Up/Down to move between Entries and Right/Left for Pages</div>
+			</div>
+		</div>
+				
+				
+</div>
+		
+
+	
